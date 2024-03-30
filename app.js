@@ -25,21 +25,26 @@ function Login2() {
     }
 }
 
-// let input = document.getElementById("input");
-// let text = document.querySelector(".form-control");
-
 function addTask() {
     let userText = document.querySelector("#task-input");
-    let task = document.querySelector(".card-body h5");
-    task.innerText += ` ${userText.value}`;
+    if (userText.value == "") {
+        alert("Please enter Task title!");
+    }
+    else {
+    let task = document.querySelector(".card-body");
+    task.innerHTML += ` <h3 class = "ms-3"><span><i class="fa-regular fa-square-check text-warning"></i></span> ${userText.value} </h3>`;
     userText.value = "";
-    // else (input.value == "") {
-    //     alert("Please enter Task!");
-    // }
+    }
 }
+
 function addDetail() {
     let userDetail = document.querySelector("#task-detail");
-    let taskDetail  = document.querySelector(".card-body p");
-    taskDetail.innerText += ` ${userDetail.value}`
-    userDetail.value = ""
+    if (userDetail.value == "") {
+        alert("Please enter Task details!");
+    }
+    else {
+        let taskDetail  = document.querySelector(".card-body");
+        taskDetail.innerHTML += ` <h6 class = "ms-5">${userDetail.value}</h6>`
+        userDetail.value = ""
+    }
 }
