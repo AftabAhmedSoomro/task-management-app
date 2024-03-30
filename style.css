@@ -28,3 +28,9 @@ body {
 .form-control:focus {
     color: #fff;
 }
+.border-radius {
+    border-radius: 0%;
+}
+.card {
+    border: #455A64;
+}
